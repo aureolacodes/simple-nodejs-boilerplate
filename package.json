@@ -2,18 +2,18 @@
   "name": "simple_nodejs_boilerplate",
   "version": "0.0.0",
   "description": "Simple NodeJS Boilerplate",
-  "main": "dist/js/index.js",
+  "main": "dist/index.js",
   "watch": {
-    "compile": "{src/js/*,src/js/**/*,src/*}"
+    "compile": "{src/*,src/**/*}"
   },
   "scripts": {
     "documentation": "./node_modules/.bin/esdoc -c ./esdoc.json",
-    "test:jshint": "./node_modules/.bin/jshint src/js/*.js src/js/**/*.js",
+    "test:jshint": "./node_modules/.bin/jshint src/*.js src/**/*.js",
     "test:coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec --compilers js:babel-core/register --opts test/mocha.opts --bail test",
     "test": "npm run test:jshint && npm run test:coverage",
-    "compile:config": "cp src/js/config dist/js",
-    "compile:babelify": "babel -d dist/js/ src/js/",
-    "compile:js": "npm run compile:babelify",
+    "compile:config": "cp -r src/config dist",
+    "compile:babelify": "babel -d dist/ src/",
+    "compile:js": "npm run compile:babelify && npm run compile:config",
     "compile": "npm run test && npm run compile:js",
     "watch": "npm-watch",
     "install": "npm run compile"
