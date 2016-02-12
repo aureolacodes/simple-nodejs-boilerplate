@@ -10,7 +10,7 @@ let chai = require('chai');
 let should = chai.should();
 let expect = chai.expect;
 
-import Example from '../../src/js/example/Example.js';
+import Example from '../../src/example/Example.js';
 
 describe('ExampleTest', () => {
   describe('#constructor', () => {
