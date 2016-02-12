@@ -6,5 +6,5 @@
  */
 'use strict';
 
-var Example = require('example/Example.js');
+import Example from './example/Example.js';
 new Example();
