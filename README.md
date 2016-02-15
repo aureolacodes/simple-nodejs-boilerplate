@@ -17,8 +17,9 @@ Make usage in this boilerplate. All scripts are defined inside the package.json.
 | `npm install` | Install dependencies & do initial compilation. |
 | `npm run compile` | Run tests & compile the application. |
 | `npm run test` | Run tests. |
-| `npm run documentation` | Create the documentation. |
+| `npm run docs` | Create documentation & coverage reports. |
 | `npm run watch` | Starts a watcher listening to changes inside the src folder. |
+| `npm run reinstall` | Remove and reinstall all local node modules. |
 
 ## Structure
 
